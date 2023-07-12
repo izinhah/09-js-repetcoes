@@ -2,9 +2,17 @@ function Tabuada() {
     let num = document.getElementById('txtn') 
     let tab = document.getElementById('txtseltab') 
     if (num.value.length == 0) { 
-        let n = Number(num.value)  
-    } else { 
         window.alert('Por favor digite um número!')
+  
+    } else { 
+        let n = Number(num.value) 
+        let c = 1; 
+        while (c <= 10) { 
+            let item = document.createElement('option') 
+            item.text = `${num} x ${c} = ${num*c} ` 
+            tab.appendChild(item) 
+            c++
+        }
     }
     
 
